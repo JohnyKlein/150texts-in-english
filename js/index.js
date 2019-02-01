@@ -7,10 +7,11 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var youtubeReady = false;
 
 //Variable for the dynamically created youtube players
-var players= new Array();
+var players = new Array();
 var isPlaying = false;
 function onYouTubeIframeAPIReady(){
-  //The id of the iframe and is the same as the videoId	
+  //The id of the iframe and is the same as the videoId
+  // 5:50
   jQuery(".youtube-video").each(function(i, obj)  {
      players[obj.id] = new YT.Player(obj.id, {         
 			  videoId: obj.id,
@@ -30,7 +31,6 @@ function onYouTubeIframeAPIReady(){
      });
      youtubeReady = true;
   }
-
 
 function onPlayerStateChange(event) {
   var target_control =  jQuery(event.target.getIframe()).parent().parent().parent().find(".controls");
@@ -68,6 +68,14 @@ function onPlayerStateChange(event) {
             break;
     }
 };
+
+function startVideo() {
+  console.log(players);
+  console.log(players.dJaJUAGy47Q);
+  // players.loadVideoByUrl('https://youtu.be/dJaJUAGy47Q?t=355');
+}
+
+startVideo();
 
 jQuery(window).bind('load', function(){
   jQuery(".carousel-caption").fadeIn(500);
