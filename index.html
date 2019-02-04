@@ -9,29 +9,25 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" style="padding:0px;">
     <div class="row">
       <div class="col-xs-12 text-center">
         <h1>Bootstrap 3 Youtube Carousel</h1>
-        <p>Replace the IDs of the carousel items with the IDs of the youtube videos you want to display</p>
+        <p>Todos os 150 textos separados neste display.</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
+    <div class="row" style="padding:0px;">
+      <div class="col-xs-12" style="padding:0px;">
         <div id="random_number1" class="carousel slide youtube-carousel"  data-ride="carousel" data-interval="false">
           <div class="carousel-inner">
             <div class="video-container item active">
-              <div class="youtube-video" id='dJaJUAGy47Q'></div>
+              <div class="youtube-video" id='0'></div>
               <div class="carousel-caption">Video 1</div>
             </div>
             <div class="video-container item">
-              <div class="youtube-video" id='6MjRVkm9CF0'></div>
-              <div class="carousel-caption">Video 2</div>
+              <div class="youtube-video" id='1'></div>
+              <div class="carousel-caption">Video 2</div> 
             </div>
-            <!-- <div class="video-container item ">
-              <div class="youtube-video" id='R8poo-zCK9g'></div>
-              <div class="carousel-caption">Video 3</div>
-            </div> -->
           </div>
           <div class="controls">
             <a class="left carousel-control" href="#random_number1" data-slide="prev">
@@ -47,6 +43,10 @@
           </div>
         </div>
       </div>
+      <div class="col-xs-12 text-center">
+        <button class="btn btn-success" id="start">Start in Video: #1 First...</button>
+        <button class="btn btn-success" id="loop">Loop</button>
+      </div>        
     </div>
   </div>
 
