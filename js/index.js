@@ -1,14 +1,58 @@
 var videoUrl = 'dJaJUAGy47Q';
 var videos = [
   {
+    // First Snow Fall
     id: videoUrl,
-    startSeconds: 10,
-    endSeconds: 20
+    startSeconds: 350,
+    endSeconds: 420
   },
   {
+    // Jessica's First Day of School
     id: videoUrl,
-    startSeconds: 20,
-    endSeconds: 50
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    // My Flower Garden
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    // Going Camping
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    // My House
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    // My First Pet
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    // Jennifer the Firefighter
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    // Mark's Big Game
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    // The Easter Egg Hunt
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
   }
 ];
 
