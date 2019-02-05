@@ -56,7 +56,7 @@ body{
 }
 
 .controls{
-   display: none;
+   display: block;
 }
 
 .carousel-control:hover {
@@ -103,8 +103,8 @@ body{
 }
 
 .carousel-caption {
- display: none;
- background: none repeat scroll 0 0 #e25454;
+  display: block;
+  background: none repeat scroll 0 0 #e25454;
   bottom: 0;
   font-size: 12px;
   text-align: center;
