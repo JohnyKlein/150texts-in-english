@@ -109,7 +109,7 @@ body{
   font-size: 12px;
   text-align: center;
   opacity: 1;
-  padding:7px 30px 7px;
+  padding: 5px 0px 5px;
   text-transform: uppercase;
   z-index:11;
   pointer-events:none;
@@ -152,7 +152,7 @@ body{
 
 .carousel-caption {
   font-size: 18px;
-  padding:15px 20px 15px;
+  padding: 5px 0px 5px;
   }
 }
 
@@ -162,6 +162,7 @@ body{
 
 .principal-buttons {
   margin: 10px;
+  text-align: center;
 }
 
 #start {
@@ -171,13 +172,17 @@ body{
 
 #repeat-label {
   display:block;
-  text-align: center;
+  width: 50px;
+}
+
+.group-repeat {
+  width: 80px;
 }
 
 @media screen and (min-width: 992px) {
  .carousel-caption {
     font-size: 18px;
-    padding:15px 20px 15px;
+    padding: 5px 0px 5px;
   }
 }
 
