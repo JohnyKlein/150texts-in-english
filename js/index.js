@@ -7,7 +7,7 @@ var videos = [
     endSeconds: 420
   },
   {
-    name: 'Jessica"s First Day of School',
+    name: 'Jessica\'s First Day of School',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
@@ -43,7 +43,7 @@ var videos = [
     endSeconds: 531
   },
   {
-    name: 'Mark"s Big Game',
+    name: 'Mark\'s Big Game',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
@@ -63,7 +63,6 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var players = new Array();
-var loopClick = false;
 var startClick = false;
 
 function onYouTubeIframeAPIReady(){
@@ -98,7 +97,8 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
   startedVerify(event);
   loopedVerify(event);
-  carouselEvents(event);
+  //Removido para troca de vídeo a todo momento
+  // carouselEvents(event);
 };
 
 function startedVerify(event){
@@ -110,7 +110,7 @@ function startedVerify(event){
 }
 
 function loopedVerify(event){
-  if (event.data === YT.PlayerState.ENDED && loopClick) {
+  if (event.data === YT.PlayerState.ENDED && shouldedRepeat()) {
     var id = getIdFrame(event);
     event.target.loadVideoById(getVideo(id));
   }
@@ -126,6 +126,10 @@ function getVideo(index) {
 
 function getIdFrame(event) {
   return jQuery(event.target.getIframe()).attr("id");
+}
+
+function shouldedRepeat(){
+  return $('#ipt-repeat:checked').val() === "on";
 }
 
 //Functions for Carousel
@@ -171,22 +175,12 @@ function carouselEvents(event) {
 //   jQuery(".controls").fadeIn(500);
 // });
 
-jQuery('.carousel').bind('slid.bs.carousel', function (event) {
-  jQuery(".controls").fadeIn(500);
-});
+// jQuery('.carousel').bind('slid.bs.carousel', function (event) {
+//   jQuery(".controls").fadeIn(500);
+// });
 
 //General DOM Event's
 $(document).ready(function() {
-
-  $("#loop").click(function() {
-    if (loopClick === false){
-      $(this).addClass('active')
-      loopClick = true;
-    } else {
-      $(this).removeClass('active')
-      loopClick = false;
-    }
-  });
 
   $("#start").click(function() {
     var id = $('.video-container.item.active').children()[0].id;
@@ -195,5 +189,15 @@ $(document).ready(function() {
     player.playVideo();
     startClick = true;
   });
+
+  $( document ).ready(function(){
+    //   Hide the border by commenting out the variable below
+        var $on = 'section';
+        $($on).css({
+          'background':'none',
+          'border':'none',
+          'box-shadow':'none'
+        });
+    }); 
 
 });

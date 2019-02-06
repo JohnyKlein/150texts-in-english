@@ -6,6 +6,8 @@
   <title>Learning English</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/checkbox-slider.css">
 </head>
 
 <body>
@@ -71,14 +73,21 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 text-center">
-        <button class="btn btn-success" id="start">Start</button>
-        <button class="btn btn-success" id="loop">Loop</button>
-        <!-- <div class="col-xs-12 text-center">
-            <button class="btn btn-success" id="start">Start</button>
-              <input type="checkbox" checked="false" class="form-check-input" id="loop">
-              <label class="form-check-label">Loop</label>
-          </div>    -->
+      <div class="row">
+        <div class="col-xs-12 principal-buttons">
+          <div class="col-xs-offset-5 col-xs-1">
+            <button class="btn btn-success" id="start">Iniciar</button>
+          </div>
+          <div class="col-xs-1">
+            <div>
+              <label id="repeat-label">Repetir</label>
+              <label class="switch">
+                <input id="ipt-repeat" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-5"></div>
       </div>        
     </div>
   </div>

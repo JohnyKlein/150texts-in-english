@@ -1,20 +1,20 @@
-/*
+/* /*
  * Bootrap carousel plugin
  * --------------------------------------------------
  */
 
 body{
-  background-color: #e25454;
+  background-color: #860000;
   color: #fff;
 }
 
 .youtube-carousel{
-  border: 4px solid #e25454;
+  border: 4px solid #860000;
 }
 
 .video-container { 
    position: relative; /* keeps the aspect ratio */ 
-   padding-bottom: 56.25%; /* fine tunes the video positioning */ 
+   padding-bottom: 35.25%; /* fine tunes the video positioning */ 
    padding-top: 60px; overflow: hidden;
    margin-bottom: -1px;
    margin-right: -1px;   
@@ -27,7 +27,7 @@ body{
   top: 0; 
   left: 0; 
   width: 100%; 
-  height: 100%;
+  height: 450px;
 }
   
 .carousel-control .glyphicon-chevron-left{
@@ -76,7 +76,7 @@ body{
   transform: translate(0,-50%);
   -moz-border-radius: 0 90px 90px 0;
   -webkit-border-radius: 0 90px 90px 0;
-  background-color: #e25454;
+  background-color: #860000;
   display: inline-block;
   position: relative;
   float:left;
@@ -94,7 +94,7 @@ body{
   transform: translate(0,-50%);
   -moz-border-radius: 90px 0 0 90px;
   -webkit-border-radius: 90px 0 0 90px;
-  background-color: #e25454;
+  background-color: #860000;
   display: inline-block;
   position: relative;
   float:right;
@@ -104,7 +104,7 @@ body{
 
 .carousel-caption {
   display: block;
-  background: none repeat scroll 0 0 #e25454;
+  background-image: linear-gradient(to right, #860000, #8e0304, #960607, #9e090b, #a60d0e, #a60d0e, #a60d0e, #a60d0e, #9e090b, #960607, #8e0304, #860000);
   bottom: 0;
   font-size: 12px;
   text-align: center;
@@ -155,6 +155,25 @@ body{
   padding:15px 20px 15px;
   }
 }
+
+.btn.active {
+  background-color: #000;
+}
+
+.principal-buttons {
+  margin: 10px;
+}
+
+#start {
+  height: 50px;
+  width: 65px;
+}
+
+#repeat-label {
+  display:block;
+  text-align: center;
+}
+
 @media screen and (min-width: 992px) {
  .carousel-caption {
     font-size: 18px;
@@ -162,12 +181,8 @@ body{
   }
 }
 
-.btn.active {
-  background-color: #000;
-}
-
 @media (min-width: 768px) {
   .container {
       width: 90%;
   }
-}
+} 
