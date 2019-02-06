@@ -1,14 +1,58 @@
 var videoUrl = 'dJaJUAGy47Q';
 var videos = [
   {
+    name: 'First Snow Fall',
     id: videoUrl,
-    startSeconds: 10,
-    endSeconds: 20
+    startSeconds: 350,
+    endSeconds: 420
   },
   {
+    name: 'Jessica\'s First Day of School',
     id: videoUrl,
-    startSeconds: 20,
-    endSeconds: 50
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    name: 'My Flower Garden',
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    name: 'Going Camping',
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    name: 'My House',
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    name: 'My First Pet',
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    name: 'Jennifer the Firefighter',
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    name: 'Mark\'s Big Game',
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
+  },
+  {
+    name: 'The Easter Egg Hunt',
+    id: videoUrl,
+    startSeconds: 422,
+    endSeconds: 531
   }
 ];
 
@@ -19,11 +63,12 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var players = new Array();
-var loopClick = false;
 var startClick = false;
 
 function onYouTubeIframeAPIReady(){
+  var count = 0;
   jQuery(".youtube-video").each(function(i, obj)  {
+    $(`#caption${count}`).html(videos[count].name);
     players[obj.id] = new YT.Player(obj.id, {      
         playerVars: {
           controls: 2,
@@ -39,6 +84,7 @@ function onYouTubeIframeAPIReady(){
           'onStateChange': onPlayerStateChange
         }
       });
+      count++;
     });
   }
 
@@ -51,7 +97,8 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
   startedVerify(event);
   loopedVerify(event);
-  carouselEvents(event);
+  //Removido para troca de vídeo a todo momento
+  // carouselEvents(event);
 };
 
 function startedVerify(event){
@@ -63,7 +110,7 @@ function startedVerify(event){
 }
 
 function loopedVerify(event){
-  if (event.data === YT.PlayerState.ENDED && loopClick) {
+  if (event.data === YT.PlayerState.ENDED && shouldedRepeat()) {
     var id = getIdFrame(event);
     event.target.loadVideoById(getVideo(id));
   }
@@ -81,65 +128,59 @@ function getIdFrame(event) {
   return jQuery(event.target.getIframe()).attr("id");
 }
 
+function shouldedRepeat(){
+  return $('#ipt-repeat:checked').val() === "on";
+}
+
 //Functions for Carousel
 function carouselEvents(event) {
   var target_control =  jQuery(event.target.getIframe()).parent().parent().parent().find(".controls");
   var target_caption = jQuery(event.target.getIframe()).parent().find(".carousel-caption");
   
-  switch(event.data){
-    case -1:
-      jQuery(target_control).fadeIn(500);
-      jQuery(target_control).children().unbind('click');
-      break
-    case 0:
-      jQuery(target_control).fadeIn(500);
-      jQuery(target_control).children().unbind('click');
-      break;
-    case 1:
-      jQuery(target_control).children().click(function () {return false;});
-      jQuery(target_caption).fadeOut(500);
-      jQuery(target_control).fadeOut(500);
-      break;
-      case 2:
-        jQuery(target_control).fadeIn(500);
-        jQuery(target_control).children().unbind('click'); 
-        break;
-      case 3:
-        jQuery(target_control).children().click(function () {return false;});
-        jQuery(target_caption).fadeOut(500);
-        jQuery(target_control).fadeOut(500);
-        break;
-      case 5:
-        jQuery(target_control).children().click(function () {return false;});
-        jQuery(target_caption).fadeOut(500);
-        jQuery(target_control).fadeOut(500);
-        break;
-      default:
-        break;
-    }
+  // switch(event.data){
+  //   case -1:
+  //     jQuery(target_control).fadeIn(500);
+  //     jQuery(target_control).children().unbind('click');
+  //     break
+  //   case 0:
+  //     jQuery(target_control).fadeIn(500);
+  //     jQuery(target_control).children().unbind('click');
+  //     break;
+  //   case 1:
+  //     jQuery(target_control).children().click(function () {return false;});
+  //     jQuery(target_caption).fadeOut(500);
+  //     jQuery(target_control).fadeOut(500);
+  //     break;
+  //     case 2:
+  //       jQuery(target_control).fadeIn(500);
+  //       jQuery(target_control).children().unbind('click'); 
+  //       break;
+  //     case 3:
+  //       jQuery(target_control).children().click(function () {return false;});
+  //       jQuery(target_caption).fadeOut(500);
+  //       jQuery(target_control).fadeOut(500);
+  //       break;
+  //     case 5:
+  //       jQuery(target_control).children().click(function () {return false;});
+  //       jQuery(target_caption).fadeOut(500);
+  //       jQuery(target_control).fadeOut(500);
+  //       break;
+  //     default:
+  //       break;
+  //   }
 }
 
-jQuery(window).bind('load', function(){
-  jQuery(".carousel-caption").fadeIn(500);
-  jQuery(".controls").fadeIn(500);
-});
+// jQuery(window).bind('load', function(){
+//   jQuery(".carousel-caption").fadeIn(500);
+//   jQuery(".controls").fadeIn(500);
+// });
 
-jQuery('.carousel').bind('slid.bs.carousel', function (event) {
-  jQuery(".controls").fadeIn(500);
-});
+// jQuery('.carousel').bind('slid.bs.carousel', function (event) {
+//   jQuery(".controls").fadeIn(500);
+// });
 
 //General DOM Event's
 $(document).ready(function() {
-
-  $("#loop").click(function() {
-    if (loopClick === false){
-      $(this).addClass('active')
-      loopClick = true;
-    } else {
-      $(this).removeClass('active')
-      loopClick = false;
-    }
-  });
 
   $("#start").click(function() {
     var id = $('.video-container.item.active').children()[0].id;
@@ -148,5 +189,15 @@ $(document).ready(function() {
     player.playVideo();
     startClick = true;
   });
+
+  $( document ).ready(function(){
+    //   Hide the border by commenting out the variable below
+        var $on = 'section';
+        $($on).css({
+          'background':'none',
+          'border':'none',
+          'box-shadow':'none'
+        });
+    }); 
 
 });

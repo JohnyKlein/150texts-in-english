@@ -3,16 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Bootstrap 3 Youtube Carousel</title>
+  <title>Learning English</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/checkbox-slider.css">
 </head>
 
 <body>
   <div class="container" style="padding:0px;">
     <div class="row">
       <div class="col-xs-12 text-center">
-        <h1>Bootstrap 3 Youtube Carousel</h1>
+        <h1>Learning English</h1>
         <p>Todos os 150 textos separados neste display.</p>
       </div>
     </div>
@@ -21,12 +23,40 @@
         <div id="random_number1" class="carousel slide youtube-carousel"  data-ride="carousel" data-interval="false">
           <div class="carousel-inner">
             <div class="video-container item active">
-              <div class="youtube-video" id='0'></div>
-              <div class="carousel-caption">Video 1</div>
+              <div class="youtube-video" id="0"></div>
+              <div class="carousel-caption" id="caption0"></div>
             </div>
             <div class="video-container item">
-              <div class="youtube-video" id='1'></div>
-              <div class="carousel-caption">Video 2</div> 
+              <div class="youtube-video" id="1"></div>
+              <div class="carousel-caption" id="caption1"></div> 
+            </div>
+            <div class="video-container item">
+              <div class="youtube-video" id="2"></div>
+              <div class="carousel-caption" id="caption2"></div> 
+            </div>
+            <div class="video-container item">
+              <div class="youtube-video" id="3"></div>
+              <div class="carousel-caption" id="caption3"></div> 
+            </div>
+            <div class="video-container item">
+              <div class="youtube-video" id="4"></div>
+              <div class="carousel-caption" id="caption4"></div> 
+            </div>
+            <div class="video-container item">
+              <div class="youtube-video" id="5"></div>
+              <div class="carousel-caption" id="caption5"></div> 
+            </div>
+            <div class="video-container item">
+              <div class="youtube-video" id="6"></div>
+              <div class="carousel-caption" id="caption6"></div> 
+            </div>
+            <div class="video-container item">
+              <div class="youtube-video" id="7"></div>
+              <div class="carousel-caption" id="caption7"></div> 
+            </div>
+            <div class="video-container item">
+              <div class="youtube-video" id="8"></div>
+              <div class="carousel-caption" id="caption8"></div> 
             </div>
           </div>
           <div class="controls">
@@ -43,9 +73,21 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 text-center">
-        <button class="btn btn-success" id="start">Start in Video: #1 First...</button>
-        <button class="btn btn-success" id="loop">Loop</button>
+      <div class="row">
+        <div class="col-xs-12 principal-buttons">
+          <div class="col-xs-offset-5 col-xs-1">
+            <button class="btn btn-success" id="start">Iniciar</button>
+          </div>
+          <div class="col-xs-1">
+            <div>
+              <label id="repeat-label">Repetir</label>
+              <label class="switch">
+                <input id="ipt-repeat" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-5"></div>
       </div>        
     </div>
   </div>
