@@ -117,7 +117,7 @@ body{
 
 @media screen and (min-width: 768px) {
 .right-button {
-  height:120px;
+  height:320px;
   width:60px;
   border-radius: 90px 0 0 90px;
   -moz-border-radius: 90px 0 0 90px;
@@ -128,7 +128,7 @@ body{
 }
 
 .left-button {
-  height:120px;
+  height:320px;
   width:60px;
   border-radius: 0 90px 90px 0;
   -moz-border-radius: 0 90px 90px 0;
@@ -139,13 +139,13 @@ body{
 }
 
 .carousel-control .glyphicon-chevron-left{
-  top:35%;
+  top:45%;
   font-size: 35px;
   left:5%;
 }
 
 .carousel-control .glyphicon-chevron-right{
-  top:35%;
+  top:45%;
   font-size: 35px;
   left:35%;
 }
@@ -153,6 +153,16 @@ body{
 .carousel-caption {
   font-size: 18px;
   padding: 5px 0px 5px;
+  }
+
+  .video-container {
+    padding-bottom: 80.25%;
+  }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    height: 850px;
   }
 }
 
