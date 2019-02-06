@@ -1,55 +1,55 @@
 var videoUrl = 'dJaJUAGy47Q';
 var videos = [
   {
-    name: 'First Snow Fall',
+    name: '#1-First Snow Fall',
     id: videoUrl,
     startSeconds: 350,
     endSeconds: 420
   },
   {
-    name: 'Jessica\'s First Day of School',
+    name: '#2-Jessica\'s First Day of School',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
   },
   {
-    name: 'My Flower Garden',
+    name: '#3-My Flower Garden',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
   },
   {
-    name: 'Going Camping',
+    name: '#4-Going Camping',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
   },
   {
-    name: 'My House',
+    name: '#5-My House',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
   },
   {
-    name: 'My First Pet',
+    name: '#6-My First Pet',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
   },
   {
-    name: 'Jennifer the Firefighter',
+    name: '#7-Jennifer the Firefighter',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
   },
   {
-    name: 'Mark\'s Big Game',
+    name: '#8-Mark\'s Big Game',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
   },
   {
-    name: 'The Easter Egg Hunt',
+    name: '#9-The Easter Egg Hunt',
     id: videoUrl,
     startSeconds: 422,
     endSeconds: 531
