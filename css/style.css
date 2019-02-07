@@ -115,7 +115,7 @@ body{
   pointer-events:none;
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (max-width: 600px) {
 .right-button {
   height:320px;
   width:60px;
