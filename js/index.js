@@ -21,8 +21,8 @@ var videos = [
   {
     name: '#4-Going Camping',
     id: videoUrl,
-    startSeconds: 422,
-    endSeconds: 531
+    startSeconds: 597,
+    endSeconds: 665
   },
   {
     name: '#5-My House',
