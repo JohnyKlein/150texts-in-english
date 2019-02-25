@@ -27,32 +27,32 @@ var videos = [
   {
     name: '#5-My House',
     id: videoUrl,
-    startSeconds: 422,
-    endSeconds: 531
+    startSeconds: 665,
+    endSeconds: 740
   },
   {
     name: '#6-My First Pet',
     id: videoUrl,
-    startSeconds: 422,
-    endSeconds: 531
+    startSeconds: 741,
+    endSeconds: 805
   },
   {
     name: '#7-Jennifer the Firefighter',
     id: videoUrl,
-    startSeconds: 422,
-    endSeconds: 531
+    startSeconds: 807,
+    endSeconds: 105
   },
   {
     name: '#8-Mark\'s Big Game',
     id: videoUrl,
-    startSeconds: 422,
-    endSeconds: 531
+    startSeconds: 1007,
+    endSeconds: 1130
   },
   {
     name: '#9-The Easter Egg Hunt',
     id: videoUrl,
-    startSeconds: 422,
-    endSeconds: 531
+    startSeconds: 1510,
+    endSeconds: 1900
   }
 ];
 
